@@ -1,0 +1,12 @@
+LAMP icon for Ubuntu 10.04
+--------------------------
+
+This program is a tray icon that allows you to start/stop Apache and MySQL with
+a single mouse click. It's specifically taylored upon Ubuntu 10.04, most likely
+it won't work elsewhere without modifications of the commands to start, stop
+and check the status of the services.
+
+It works for the Apache and MySQL packages bundled with Ubuntu itself.
+
+To use it effectively you should add /usr/bin/lamp-icon to your desktop's
+autostart programs.

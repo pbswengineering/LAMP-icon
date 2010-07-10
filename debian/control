@@ -1,0 +1,16 @@
+Source: lamp-icon
+Section: net
+Priority: extra
+Maintainer: Paolo Bernardi <villa.lobos@tiscali.it>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.8.3
+Homepage: http://paolobernardi.wordpress.com
+
+Package: lamp-icon
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, python, python-gtk2, apache2, mysql-server
+Description: Control Apache and MySQL with a click on a tray icon
+ This tray icon allows you to start/stop Apache and MySQL with a single click.
+ It's designed for Ubuntu 10.04 and its versions of Apache and MySQL, it will
+ not probably work elsewhere. To use it effectively you've better adding
+ /usr/bin/lamp-icon to the list of your desktop's autostart programs.
