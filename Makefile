@@ -12,7 +12,14 @@ install:
 	mkdir -p $(DESTDIR)/usr/share/doc/lamp-icon/
 	cp AUTHORS COPYING README $(DESTDIR)/usr/share/doc/lamp-icon/
 	test -d $(DESTDIR)/usr/bin/ || mkdir -p $(DESTDIR)/usr/bin/
-	ln -s $(DESTDIR)/usr/share/lamp-icon/lamp-icon.py $(DESTDIR)/usr/bin/lamp-icon
+
+	# A symbolic link isn't the same... The absolute path is stored into
+	# it, so my computer's path would remain into it; a script seems a
+	# better choice.
+	#ln -s $(DESTDIR)/usr/share/lamp-icon/lamp-icon.py $(DESTDIR)/usr/bin/lamp-icon
+	echo /usr/share/lamp-icon/lamp-icon.py > $(DESTDIR)/usr/bin/lamp-icon
+	chmod +x $(DESTDIR)/usr/bin/lamp-icon
+
 	test -d $(DESTDIR)/usr/share/applications/ || mkdir -p $(DESTDIR)/usr/share/applications/
 	cp lamp-icon.desktop $(DESTDIR)/usr/share/applications/
 	update-desktop-database || true
